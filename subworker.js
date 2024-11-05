@@ -10,14 +10,14 @@ let mytoken= 'username';
 // any Domain or clean IPv4/IPv6 addresses from cloudflare is usable, When sub is empty, the local preferred domain name/preferred IP is enabled. If the port number is not provided, the default TLS port is 443, and the alias after the # sign is a remark
 let addresses = [
 	"zula.ir:443#★CFW¹",
-  "fbi.gov:8443#★CFW²",
-  "icook.hk:2053#★CFW³",
-  "cdnjs.com:2083#★CFW⁴",
-  "www.wto.org:2087#★CFW⁵",
-  "go.inmobi.com:2096#★CFW⁶",
-  "www.speedtest.net:443#★CFW⁷",
-  "sky.rethinkdns.com:8443#★CFW⁸",
-  "creativecommons.org:2053#★CFW⁹",
+	"fbi.gov:8443#★CFW²",
+	"icook.hk:2053#★CFW³",
+	"cdnjs.com:2083#★CFW⁴",
+	"www.wto.org:2087#★CFW⁵",
+	"go.inmobi.com:2096#★CFW⁶",
+	"www.speedtest.net:443#★CFW⁷",
+	"sky.rethinkdns.com:8443#★CFW⁸",
+	"creativecommons.org:2053#★CFW⁹",
 ];
 
 // you can use any addresses api's like this one: 'https://raw.githubusercontent.com/NiREvil/CFW-BOT/main/ips.txt'
