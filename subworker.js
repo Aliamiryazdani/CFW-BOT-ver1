@@ -1,41 +1,34 @@
 /**
 * WorkerVless2sub  -  Thanks to https://github.com/cmliu
-* @ts-nocheck   Last Update: 12:59 UTC - Thursday, 25 July 2024 by REvil
-* 
+* @ts-nocheck   Last Update: 4:20 UTC - Tuesday, 5 November 2024, @Diana-Cl
 */
-
 
 // After the deployment is completed, add this after the URL to obtain the default node of the subscriber./auto
 let mytoken= 'username';
 
-
 let addresses = [
-	"zula.ir:443#CFW-√1",
-	"icook.hk:2083#CFW-√2",
-	"vista.com:2053#CFW-√3",
-	"cdnjs.com:8443#CFW-√4",
-	"go.inmobi.com:2053#CFW-√5",
-	"www.csgo.com:2083#CFW-√6",
-	"www.speedtest.net:443#CFW-√7",
-	"sky.rethinkdns.com:2053#CFW-√8",
-	"time.cloudflare.com:2053#CFW-√9",
-	"creativecommons.org:443#CFW-√10",
-	"speed.cloudflare.com:8443#CFW-√11",
-
+      // any Domain or clean IPv4/IPv6 addresses from cloudflare is usable, When sub is empty, the local preferred domain name/preferred IP is enabled. If the port number is not provided, the default TLS port is 443, and the alias after the # sign is a remark
+      "zula.ir:443#★CFW¹',
+      'fbi.gov:8443#★CFW²',
+      'icook.hk:2053#★CFW³',
+      'cdnjs.com:2083#★CFW⁴',
+      'www.wto.org:2087#★CFW⁵',
+      'go.inmobi.com:2096#★CFW⁶',
+      'www.speedtest.net:443#★CFW⁷',
+      'sky.rethinkdns.com:8443#★CFW⁸',
+      'creativecommons.org:2053#★CFW⁹',
 ];
 
 // addresses api
 let addressesapi = [
-	'https://raw.githubusercontent.com/NiREvil/CFW-BOT/main/ips.txt',
+      // you can use any addresses api's like this one: 'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv'
+    	'https://raw.githubusercontent.com/NiREvil/CFW-BOT/main/ips.txt',
 ];
 
-let DLS = 4;
-let addressescsv = [
-	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv' //iptest。
-];
-
-let subconverter = "subapi-loadbalancing.pages.dev"; //The online subscription conversion backend currently uses Feiyang's subscription conversion function. Supports self-built psub and can be built by yourselfhttps://github.com/bulianglin/psub
-let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; 
+let DLS = 8;
+let addressescsv = []; 
+let subconverter = "SUBAPI.fxxk.dedyn.io"; //The online subscription conversion backend currently uses Feiyang's subscription conversion function. Supports self-built psub and can be built by yourselfhttps://github.com/bulianglin/psub
+let subconfig = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini"; // Subscription Profile
 
 let link = '';
 let edgetunnel = 'ed';
@@ -49,22 +42,20 @@ let CMproxyIPs = [
 ];
 let BotToken ='';
 let ChatID =''; 
-let proxyhosts = [
-
-];
-let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';
+let proxyhosts = []; //Local proxy domain name pool
+let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts'; //Online proxy domain pool URL
 let EndPS = '';
 
 let FileName = 'WorkerVless2sub';
 let SUBUpdateTime = 6; 
 let total = 99;//PB
 //let timestamp = now;
-let timestamp = 4102329600000;//2099-12-31
+let timestamp = 4102329600;//2099-12-31
 
 async function sendMessage(type, ip, add_data = "") {
 	if ( BotToken !== '' && ChatID !== ''){
 		let msg = "";
-		const response = await fetch(`http://ip-api.com/json/${ip}?lang=zh-CN`);
+		const response = await fetch(`http://ip-api.com/json/${ip}?lang=en`);
 		if (response.status == 200) {
 			const ipInfo = await response.json();
 			msg = `${type}\nIP: ${ip}\n国家: ${ipInfo.country}\n<tg-spoiler>城市: ${ipInfo.city}\n组织: ${ipInfo.org}\nASN: ${ipInfo.as}\n${add_data}`;
@@ -152,11 +143,9 @@ async function getAddressescsv() {
 				continue;
 			}
 		
-			
 			for (let i = 1; i < lines.length; i++) {
 				const columns = lines[i].split(',');
 		
-				
 				if (columns[tlsIndex].toUpperCase() === 'TRUE' && parseFloat(columns[speedIndex]) > DLS) {
 					const ipAddress = columns[ipAddressIndex];
 					const port = columns[portIndex];
@@ -236,10 +225,6 @@ export default {
 			
 			
 			
-			
-			
-			
-				
 				https://github.com/cmliu/WorkerVless2sub
 				`;
 			
@@ -259,10 +244,7 @@ export default {
 			
 			
 			
-			
-			
-			
-				
+
 				https://github.com/cmliu/WorkerVless2sub
 				`;
 			
