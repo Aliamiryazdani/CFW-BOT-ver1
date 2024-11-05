@@ -43,7 +43,7 @@ let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main
 let EndPS = '';
 
 let FileName = 'WorkerVless2sub';
-let SUBUpdateTime = 24; 
+let SUBUpdateTime = 12; 
 let total = 99;//PB
 //let timestamp = now;
 let timestamp = 4102329600;//2099-12-31
